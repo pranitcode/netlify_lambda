@@ -2,7 +2,7 @@ const axios = require('axios');
 
 exports.handler = function(event, context, callback){
   const { API_URL, API_CLIENT_ID, API_CLIENT_SECRET } = process.env;
-  const URL = `https://api.github.com/users?client_id=${API_CLIENT_ID}&client_secret=${API_CLIENT_SECRET}`;
+  const URL = `https://api.github.com/users/pranitcode/repos?type=owner&sort=updated&client_id=${API_CLIENT_ID}&client_secret=${API_CLIENT_SECRET}`;
 
   // Send user response
   const send = body => {
